@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Performance Prediction</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: 'Montserrat', sans-serif;
+        }
+        body {
+            background-image: url('https://images.unsplash.com/photo-1516450360452-9312f5e86fc7?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+        .container {
+            background-color: rgba(0, 0, 0, 0.7);
+            padding: 40px;
+            border-radius: 15px;
+            max-width: 600px;
+            width: 90%;
+            color: white;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        .prediction-title {
+            font-size: 3rem;
+            margin-bottom: 30px;
+            color: #4CAF50;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+        .high-achiever {
+            color: #4CAF50;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .low-achiever {
+            color: #F44336;
+            font-size: 4rem;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+        .quote {
+            font-style: italic;
+            font-size: 1.5rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        .motivational-text {
+            font-size: 1.2rem;
+            margin-bottom: 30px;
+            color: #e0e0e0;
+        }
+        .back-link {
+            display: inline-block;
+            background-color: #2196F3;
+            color: white;
+            padding: 12px 24px;
+            text-decoration: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+        }
+        .back-link:hover {
+            background-color: #1976D2;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="prediction-title">PREDICTION</h1>
+        
+        {% if data == 1 %}
+            <h1 class="high-achiever">High Achiever</h1>
+            <p class="quote">"Success is not a Destination"</p>
+            <p class="motivational-text">Congratulations on your outstanding performance!</p>
+        {% else %}
+            <h1 class="low-achiever">Low Achiever</h1>
+            <p class="quote">"Never Ever Give Up"</p>
+            <p class="motivational-text">Keep pushing forward. Every setback is a setup for a comeback!</p>
+        {% endif %}
+        
+        <a href='/' class="back-link">Return to Home Page</a>
+    </div>
+</body>
+</html>
